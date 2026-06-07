@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana C S Costa — Portfólio</title>
+
+  <!-- Tipografia: ajuste as fontes aqui se quiser -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================== -->
+  <!-- HEADER FIXO                    -->
+  <!-- ============================== -->
+  <header class="site-header">
+    <!-- EDITAR: nome exibido no header -->
+    <a href="#" class="site-header__name" id="home-link">ANA C S COSTA</a>
+
+    <!-- EDITAR: link de contato (href e texto) -->
+    <a href="mailto:anacarolinascosta23@gmail.com" class="site-header__contact">CONTATO</a>
+  </header>
+
+  <div class="page-wrapper">
+
+    <!-- ============================== -->
+    <!-- COLUNA ESQUERDA — PROJETOS     -->
+    <!-- ============================== -->
+    <main class="content-area" id="content-area">
+
+      <!-- Visão: listagem do portfólio -->
+      <section class="list-view" id="list-view">
+        <div class="portfolio-header">
+          <h1 class="portfolio-title">PORTFÓLIO</h1>
+          <nav class="filters" id="filters" aria-label="Filtrar projetos">
+            <button class="filter-btn" data-filter="pedagogico">PROJETOS PEDAGÓGICOS</button>
+            <button class="filter-btn" data-filter="design">PROJETOS DE DESIGN</button>
+            <button class="filter-btn filter-btn--active" data-filter="all">TODOS</button>
+          </nav>
+        </div>
+
+        <!-- Cards gerados dinamicamente a partir do array `projects` em script.js -->
+        <div class="projects-list" id="projects-list"></div>
+      </section>
+
+      <!-- Visão: detalhe do projeto -->
+      <section class="detail-view hidden" id="detail-view" aria-hidden="true">
+        <!-- Banner em largura total, preenchido via JavaScript -->
+        <div class="detail-banner" id="detail-banner" hidden></div>
+
+        <div class="detail-view__container">
+          <!-- Botão para voltar à listagem -->
+          <button class="back-btn" id="back-btn" type="button">
+            <img
+              class="back-btn__icon"
+              src="Assets/arrow-back.png"
+              alt=""
+              width="16"
+              height="16"
+            >
+            Voltar / <span class="back-btn__label">PORTFÓLIO</span>
+          </button>
+
+          <!-- Conteúdo textual preenchido via JavaScript -->
+          <article class="detail-content" id="detail-content"></article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============================== -->
+    <!-- COLUNA DIREITA — SIDEBAR       -->
+    <!-- Escondida na tela de detalhe   -->
+    <!-- ============================== -->
+    <aside class="sidebar" id="sidebar">
+
+      <!-- EDITAR: foto de perfil -->
+      <img
+        src="Assets/profile.png"
+        alt="Foto de perfil de Ana C S Costa"
+        class="sidebar__photo"
+      >
+
+      <div class="sidebar__bio">
+        <!-- EDITAR: textos da bio abaixo -->
+        <p class="sidebar__bio-greeting">Oi, sou a Ana,</p>
+
+        <p>
+          Designer com formação em Arquitetura e Design, com experiência em UX/UI,
+          Design Gráfico e desenvolvimento de produtos digitais para plataformas Apple.
+          Com mestrado multidisciplinar entre gestão urbana e design das tecnologias.
+        </p>
+
+        <p>
+          Atuo como mentora na <strong>Apple Developer Academy PUCPR</strong>
+          (2025–2026), onde também fui mentora jr. (2023–2024) e alumni (2021–2022).
+        </p>
+
+        <p>
+          Participei do desenvolvimento de aplicativos utilizando
+          <strong>SwiftUI</strong> e <strong>UIKit</strong>, metodologias
+          <strong>Challenge Based Learning (CBL)</strong>, e colaborando em projetos
+          multidisciplinares focados na resolução de desafios reais.
+        </p>
+      </div>
+
+      <div class="sidebar__social">
+        <!-- EDITAR: links das redes sociais (href e alt) -->
+        <a href="https://www.linkedin.com/in/ana-carolina-s-costa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="Assets/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="http://lattes.cnpq.br/4768466282433618" target="_blank" rel="noopener noreferrer" aria-label="Lattes">
+          <img src="Assets/lattes.png" alt="Lattes">
+        </a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
